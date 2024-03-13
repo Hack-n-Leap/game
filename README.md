@@ -7,14 +7,14 @@
 > **Major changes to the way the project works!**
 
 ## About the project
-SOON
+*SOON*
 
 ## Contributing
-We are accepting contribution from everyone. If you want to contribute, please follow the guide below :
+We welcome contributions from everyone. If you would like to contribute, please follow the guide below :
 
 1. Fork the Project.
-2. Create your Feathure Branch (`git checkout -b feature/AmazingFeature`).
-3. Commit your Change (`git commit -m 'Add some AmazingFeature'`).
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`).
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`).
 4. Push to the Branch (`git push origin feature/AmazingFeature`).
 5. Open a pull request.
 
