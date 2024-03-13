@@ -7,7 +7,7 @@
 > **Major changes to the way the project works!**
 
 ## About the project
-*SOON*
+Hack'n'Leap is a platform game on the theme of programming, in which the player evolves by programming in pseudo-code. Throughout the game, players will have to create new functions and assign them to keys to advance through the game's multiple levels. The game is developed in C# using the Unity game engine.
 
 ## Contributing
 We welcome contributions from everyone. If you would like to contribute, please follow the guide below :
