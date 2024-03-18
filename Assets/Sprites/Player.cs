@@ -41,11 +41,12 @@ public class PlayerMovement : MonoBehaviour
             Vector2 movement = new Vector2(moveHorizontal, moveVertical + 2);
             rb.velocity = movement * speed;
 
-            anim.SetBool("run", true);
+            anim.SetBool("jump", true);
         } 
         
         else {
             anim.SetBool("run", false);
+            anim.SetBool("jump", false);
         }
 
     }
