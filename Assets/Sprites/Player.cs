@@ -15,39 +15,29 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        float moveHorizontal = Input.GetAxis("Horizontal");
+        float moveVertical = Input.GetAxis("Vertical");
+
         if (Input.GetKey(KeyCode.D)) { // la touche D permet de se déplacer  vers la droite 
-            float moveHorizontal = Input.GetAxis("Horizontal");
-            float moveVertical = Input.GetAxis("Vertical");
+            Vector2 movement = new Vector2(moveHorizontal, moveVertical);
 
-            Vector2 movement = new Vector2(moveHorizontal + 1, moveVertical);
             rb.velocity = movement * speed;
-
-            anim.SetBool("run", true);
 
         } else if (Input.GetKey(KeyCode.A)) { // La touche Q permet de déplacer vers la gauche
-            float moveHorizontal = Input.GetAxis("Horizontal");
-            float moveVertical = Input.GetAxis("Vertical");
+            Vector2 movement = new Vector2(moveHorizontal, moveVertical);
 
-            Vector2 movement = new Vector2(moveHorizontal - 1, moveVertical);
             rb.velocity = movement * speed;
-
-            anim.SetBool("run", true);
-
-
-        } else if (Input.GetKey(KeyCode.Space)) { // La touche espace permet de sauter
-            float moveHorizontal = Input.GetAxis("Horizontal");
-            float moveVertical = Input.GetAxis("Vertical");
-
-            Vector2 movement = new Vector2(moveHorizontal, moveVertical + 2);
-            rb.velocity = movement * speed;
-
-            anim.SetBool("jump", true);
-        } 
-        
-        else {
-            anim.SetBool("run", false);
-            anim.SetBool("jump", false);
         }
+        
+        if (Input.GetKey(KeyCode.Space)) { // La touche espace permet de sauter
+            moveVertical += 2;
+            Vector2 movement = new Vector2(moveHorizontal, moveVertical);
+
+            rb.velocity = movement * speed;
+        } 
+
+        anim.SetBool("run", moveHorizontal != 0);
+        anim.SetBool("jump", moveVertical != 0);
 
     }
 }
