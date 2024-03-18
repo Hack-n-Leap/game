@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody2D rb;
     private Animator anim;
+    private bool grounded;
 
     void Start()
     {
@@ -13,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
-    void Update()
+    private void Update()
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
@@ -31,15 +32,23 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = movement * speed;
         }
         
-        if (Input.GetKey(KeyCode.Space)) { // La touche espace permet de sauter
+        if (Input.GetKey(KeyCode.Space) && grounded) { // La touche espace permet de sauter
             moveVertical += 2;
             Vector2 movement = new Vector2(moveHorizontal, moveVertical);
 
             rb.velocity = movement * speed;
+
+            grounded = false;
         } 
 
         anim.SetBool("run", moveHorizontal != 0);
         anim.SetBool("jump", moveVertical != 0);
 
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision) {
+        if (collision.gameObject.tag == "Ground") {
+            grounded = true;
+        }
     }
 }
