@@ -33,8 +33,18 @@ public class PlayerMovement : MonoBehaviour
 
             anim.SetBool("run", true);
 
-            
-        } else {
+
+        } else if (Input.GetKey(KeyCode.Space)) { // La touche espace permet de sauter
+            float moveHorizontal = Input.GetAxis("Horizontal");
+            float moveVertical = Input.GetAxis("Vertical");
+
+            Vector2 movement = new Vector2(moveHorizontal, moveVertical + 2);
+            rb.velocity = movement * speed;
+
+            anim.SetBool("run", true);
+        } 
+        
+        else {
             anim.SetBool("run", false);
         }
 
