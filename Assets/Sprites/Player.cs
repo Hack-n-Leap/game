@@ -18,12 +18,14 @@ public class PlayerMovement : MonoBehaviour
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
 
-        if (Input.GetKey(KeyCode.D)) { // la touche D permet de se déplacer  vers la droite 
+        if (Input.GetKey(KeyCode.D)) { // la touche D permet de se déplacer  vers la droite
+            moveHorizontal += 1; 
             Vector2 movement = new Vector2(moveHorizontal, moveVertical);
 
             rb.velocity = movement * speed;
 
         } else if (Input.GetKey(KeyCode.A)) { // La touche Q permet de déplacer vers la gauche
+            moveHorizontal -= 1;
             Vector2 movement = new Vector2(moveHorizontal, moveVertical);
 
             rb.velocity = movement * speed;
