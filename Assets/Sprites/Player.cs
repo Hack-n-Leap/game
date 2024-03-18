@@ -19,6 +19,13 @@ public class PlayerMovement : MonoBehaviour
 
             Vector2 movement = new Vector2(moveHorizontal + 1, moveVertical);
             rb.velocity = movement * speed;
+        } else if (Input.GetKey(KeyCode.A)) { // La touche Q permet de déplacer vers la gauche
+            float moveHorizontal = Input.GetAxis("Horizontal");
+            float moveVertical = Input.GetAxis("Vertical");
+
+            Vector2 movement = new Vector2(moveHorizontal - 1, moveVertical);
+            rb.velocity = movement * speed;
         }
+
     }
 }
