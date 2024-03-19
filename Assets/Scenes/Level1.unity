@@ -275,7 +275,7 @@ GameObject:
   - component: {fileID: 729866340}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1414,6 +1414,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2698560020055888958, guid: 575842f7e3c03e749acbe9feddf70a35, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: b8aa72759c7c13a43bfbb7bc46d52d4f, type: 2}
     - target: {fileID: 4530287992547186706, guid: 575842f7e3c03e749acbe9feddf70a35, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.040002
@@ -1453,6 +1457,10 @@ PrefabInstance:
     - target: {fileID: 4530287992547186706, guid: 575842f7e3c03e749acbe9feddf70a35, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702833666319445463, guid: 575842f7e3c03e749acbe9feddf70a35, type: 3}
+      propertyPath: speed
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6747023793464611217, guid: 575842f7e3c03e749acbe9feddf70a35, type: 3}
       propertyPath: m_Name
