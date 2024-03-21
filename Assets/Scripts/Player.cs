@@ -22,12 +22,12 @@ public class PlayerMovement : MonoBehaviour
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
 
-        if (Input.GetKey(KeyCode.D)) { // la touche D permet de se déplacer  vers la droite
+        if (Input.GetKey(KeyCode.D) | Input.GetKey(KeyCode.RightArrow)) { // la touche D permet de se déplacer  vers la droite
             moveHorizontal += 1; 
             sr.flipX = false;
             
 
-        } else if (Input.GetKey(KeyCode.A)) { // La touche Q permet de déplacer vers la gauche
+        } else if (Input.GetKey(KeyCode.A) | Input.GetKey(KeyCode.LeftArrow)) { // La touche Q permet de déplacer vers la gauche
             moveHorizontal -= 1;
             sr.flipX = true;
             
