@@ -18,6 +18,6 @@ public class PlayerDeath : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        kill = collision.gameObject.CompareTag("Ennemi");
+        kill = collision.gameObject.CompareTag("Player");
     }
 }
