@@ -947,7 +947,7 @@ GameObject:
   - component: {fileID: 1094832444}
   - component: {fileID: 1094832443}
   m_Layer: 5
-  m_Name: cross
+  m_Name: Cross
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2062,7 +2062,7 @@ GameObject:
   - component: {fileID: 1932168493}
   - component: {fileID: 1932168492}
   m_Layer: 5
-  m_Name: window
+  m_Name: Windows
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2154,7 +2154,7 @@ GameObject:
   - component: {fileID: 1992576211}
   - component: {fileID: 1992576210}
   m_Layer: 5
-  m_Name: text
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

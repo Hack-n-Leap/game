@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class windowUI : MonoBehaviour, IDragHandler, IPointerDownHandler
+public class WindowsUI : MonoBehaviour, IDragHandler, IPointerDownHandler
 {
     Vector3 MouseDragStartPos;
     public PointerEventData.InputButton dragMouseButton;
