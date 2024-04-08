@@ -1,11 +1,11 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InputText : MonoBehaviour
 {
-    public void ReadInput(string inp)
+    public void readInputText(string inputText) 
     {
-        Debug.Log(inp);
+        Debug.Log(inputText);
     }
 }
