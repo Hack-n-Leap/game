@@ -1,0 +1,47 @@
+name: 🐛 Signaler un bug
+description: Signalez un bug pour nous aider à améliorer Hack'N'Leap
+title: "[BUG]: "
+labels: [bug]
+body:
+  - type: textarea
+    attributes:
+      label: Description du bug
+      description: Une description claire et concise du bug.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Reproduction du bug
+      description: 'Étapes pour reproduire le bug :'
+      placeholder: |
+        1. [ex: Etape 1]
+        2. [ex: Etape 2]
+      value: |
+        1. 
+        2.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Comportement attendu
+      description: Une description claire et concise de ce que vous attendiez vis-à-vis du jeux.
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Version
+      placeholder: '0.0.0'
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: "Captures d'écran / enregistrement vidéo"
+      description: "Si possible, ajoutez des captures d'écran ou des enregistrements vidéo pour nous aider à comprendre votre problème."
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: Contexte supplémentaire
+      description: Ajouter un contexte supplémentaire pour nous aider à mieux comprendre le problème rencontrer.
+    validations:
+      required: false
