@@ -5,19 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class PlayerDeath : MonoBehaviour
 {
-    public string sceneToReload;
-
+    public GameObject player;
+    public GameObject spawn;
     private bool kill;
 
     private void Update()
     {
         if (kill)
         {
-            SceneManager.LoadScene(sceneToReload);
+            PlayerSpawn();
+            kill=!kill;
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         kill = collision.gameObject.CompareTag("Player");
+    }
+    private void PlayerSpawn()
+    {
+        player.transform.position = spawn.transform.position;
     }
 }
