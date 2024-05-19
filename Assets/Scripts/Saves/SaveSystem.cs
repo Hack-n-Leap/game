@@ -15,7 +15,6 @@ public class SaveSystem : MonoBehaviour
     {
         string json = JsonUtility.ToJson(data);
         File.WriteAllText(filePath, json);
-        Debug.Log(data.playerFunctionsKey[1]);
     }
 
     public GameData LoadGame()
