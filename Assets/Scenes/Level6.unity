@@ -263,7 +263,7 @@ GameObject:
   - component: {fileID: 729866342}
   - component: {fileID: 729866341}
   - component: {fileID: 729866340}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Ground
   m_TagString: Ground
   m_Icon: {fileID: 0}
