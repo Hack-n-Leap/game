@@ -6,6 +6,11 @@ public class PlayerMovement : MonoBehaviour
     public float playerSpeed = 2f; // Vitesse de déplacement du joueur
     public float playerJumpForce = 5f; // Force de saut du joueur
 
+    public Transform feet;
+    private float feetRadius = 0.3f;
+    public LayerMask collisionLayer;
+
+
     private SpriteRenderer sr;
     private Rigidbody2D rb;
     private Animator anim;
@@ -20,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        grounded = Physics2D.OverlapCircle(feet.position,feetRadius,collisionLayer);
         float moveHorizontal = Input.GetAxis("Horizontal");
         
 
@@ -49,7 +55,8 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter2D(Collision2D collision) {
-        grounded = collision.gameObject.CompareTag("Ground");
+    private void OnDrawGizmos() {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(feet.position,feetRadius);
     }
 }
