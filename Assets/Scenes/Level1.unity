@@ -897,18 +897,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e08457d80029e24a8713e57a01f870a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &921896019
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 921896010}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4dff915f57e04b49b5093534a35b613, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &934329654
 GameObject:
   m_ObjectHideFlags: 0
@@ -2130,13 +2118,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-<<<<<<< Updated upstream
   m_AnchoredPosition: {x: 760.6389, y: 285.6593}
   m_SizeDelta: {x: -1521.2682, y: -571.3186}
-=======
-  m_AnchoredPosition: {x: 579.7606, y: -0.49993896}
-  m_SizeDelta: {x: -1159.5396, y: -1.0000612}
->>>>>>> Stashed changes
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1932168492
 MonoBehaviour:
@@ -2219,7 +2202,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 178004913}
   m_Father: {fileID: 1932168491}
@@ -2497,9 +2480,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6747023793464611217, guid: 575842f7e3c03e749acbe9feddf70a35, type: 3}
       insertIndex: -1
       addedObject: {fileID: 921896011}
-    - targetCorrespondingSourceObject: {fileID: 6747023793464611217, guid: 575842f7e3c03e749acbe9feddf70a35, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 921896019}
   m_SourcePrefab: {fileID: 100100000, guid: 575842f7e3c03e749acbe9feddf70a35, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
