@@ -1,11 +1,19 @@
-using System.Collections;
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
-public class InputText : MonoBehaviour
+public class ReadUserCode : MonoBehaviour
 {
-    public void readInputText(string inputText) 
+    private TMP_InputField inputField;
+
+    void Start() // On récupère l'objet qui contient le texte au lancement du jeu pour le manipuler par la suite
     {
-        Debug.Log(inputText);
+        GameObject inputFieldObject = GameObject.FindGameObjectWithTag("texteCode");
+        inputField = inputFieldObject.GetComponent<TMP_InputField>();
+    }
+
+    public void RetrieveText() { // Cette fonction est appelée à chaque fois que le bouton est pressé.
+        if (inputField != null) {
+            Debug.Log(inputField.text);
+        }
     }
 }
