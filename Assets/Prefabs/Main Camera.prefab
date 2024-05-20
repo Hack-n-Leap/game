@@ -106,4 +106,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  relativePosition: {x: 0, y: 2.5, z: -5}
+  relativePosition: {x: 0, y: 1.5, z: -5}
