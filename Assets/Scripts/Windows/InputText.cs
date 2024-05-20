@@ -1,7 +1,7 @@
 using UnityEngine;
 using TMPro;
 
-public class ReadUserCode : MonoBehaviour
+public class InputText : MonoBehaviour
 {
     private TMP_InputField inputField;
 

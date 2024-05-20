@@ -2283,7 +2283,7 @@ GameObject:
   - component: {fileID: 1942832536}
   - component: {fileID: 1942832541}
   - component: {fileID: 1942832540}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Rino
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -2822,6 +2822,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2845493894493844765, guid: 575842f7e3c03e749acbe9feddf70a35, type: 3}
+      propertyPath: gameData.playerLevel
+      value: Level5 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4530287992547186706, guid: 575842f7e3c03e749acbe9feddf70a35, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.68
@@ -2870,7 +2874,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1003243247840312189, guid: 575842f7e3c03e749acbe9feddf70a35, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
