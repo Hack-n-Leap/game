@@ -25,6 +25,8 @@ public class MovePlateform : MonoBehaviour
         {
             destPoint = (destPoint + 1) % waypoints.Length;
             target = waypoints[destPoint];
+            transform.rotation = target.rotation;
         }
     }
+
 }

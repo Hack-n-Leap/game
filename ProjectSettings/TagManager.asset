@@ -6,11 +6,12 @@ TagManager:
   tags:
   - Ground
   - Ennemi
+  - texteCode
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
   - 
