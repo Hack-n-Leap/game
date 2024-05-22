@@ -6,9 +6,8 @@ public class KillMob : MonoBehaviour
     {
         GameObject player = GameObject.FindWithTag("Player");;
         GameManager gameManager = player.GetComponent<GameManager>();
-        GameData gameData = gameManager.gameData;
 
-        if (collision.CompareTag("Player") && gameData.playerUnlockedFunctions[4])
+        if (collision.CompareTag("Player") && gameManager.gameData.playerUnlockedFunctions[4])
         {
             Destroy(transform.parent.gameObject);
         }

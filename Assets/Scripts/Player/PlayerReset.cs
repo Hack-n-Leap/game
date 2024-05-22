@@ -8,15 +8,13 @@ public class PlayerReset : MonoBehaviour
     public string sceneToLoad;
     private bool next;
     private GameManager gameManager;
-    private GameData gameData;
 
     private void Start() {
         gameManager = GetComponent<GameManager>();
-        gameData = gameManager.gameData;
     }
     private void Update()
     {
-        if (Input.GetKey(gameData.playerFunctionsKey[5]) && gameData.playerUnlockedFunctions[5])
+        if ((Input.GetKey(gameManager.gameData.playerFunctionsKey[5]) && SceneManager.GetActiveScene().name != "Level7") || gameManager.gameData.playerUnlockedFunctions[5] && Input.GetKey(gameManager.gameData.playerFunctionsKey[5]))
         {
             SceneManager.LoadScene(sceneToLoad);
         }
