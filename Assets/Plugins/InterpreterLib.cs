@@ -48,7 +48,7 @@ namespace InterpreterLib
             Name = name; Code = code; Var = var;
         }
 
-        public void Execute(string[] parameters, Interpreter interpreter)
+        public Interpreter Execute(string[] parameters, Interpreter interpreter)
         {
             StringBuilder functionCode = new StringBuilder(Code); // Use of String Builder because the program need to replace a string by another.
 
@@ -71,6 +71,8 @@ namespace InterpreterLib
             }
 
             functionInterpreter.EvaluateCode(functionCode.ToString()); 
+
+            return functionInterpreter;
         }
 
     }
@@ -79,11 +81,13 @@ namespace InterpreterLib
     {
         public Dictionary<string, Variable> Variables;
         public Dictionary<string, Function> Functions;
+        public List<Interpreter> FunctionsExecutionList;
 
         public Interpreter()
         {
             Variables = new Dictionary<string, Variable>();
             Functions = new Dictionary<string, Function>();
+            FunctionsExecutionList = new List<Interpreter>();
         }
 
         public void EvaluateCode(string code)
@@ -264,8 +268,7 @@ namespace InterpreterLib
             int openBracketIndex = line.IndexOf('(');
             int closeBracketIndex = line.IndexOf(')');
 
-            Functions[functionName].Execute(line[(openBracketIndex + 1)..closeBracketIndex].Split(", "), this); // Execute the function with the parameters gives in the function call.
-
+            FunctionsExecutionList.Add(Functions[functionName].Execute(line[(openBracketIndex + 1)..closeBracketIndex].Split(", "), this)); // Execute the function with the parameters gives in the function call.
         }
 
         public void EvaluatePrint(string line)
