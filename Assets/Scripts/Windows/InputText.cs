@@ -18,6 +18,9 @@ public class InputText : MonoBehaviour
             string code = inputField.text;
             string currentScene = SceneManager.GetActiveScene().name;
 
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            GameManager gameManager = player.GetComponent<GameManager>();
+
             Interpreter interpreter = new Interpreter();
 
             if (currentScene == "Level1") {
@@ -25,7 +28,8 @@ public class InputText : MonoBehaviour
                 interpreter.EvaluateCode(code);
 
                 if (interpreter.FunctionsExecutionList[0].Variables["position"].Value == "3" && interpreter.FunctionsExecutionList[1].Variables["position"].Value == "4") {
-                    Debug.Log(1);
+                    gameManager.gameData.playerUnlockedFunctions[0] = true;
+                    gameManager.SaveGame();
                 }
 
             }
