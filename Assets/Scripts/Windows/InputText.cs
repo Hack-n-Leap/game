@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using InterpreterLib;
+using UnityEngine.SceneManagement;
 
 public class InputText : MonoBehaviour
 {
@@ -14,11 +15,21 @@ public class InputText : MonoBehaviour
 
     public void RetrieveText() { // Cette fonction est appelée à chaque fois que le bouton est pressé.
         if (inputField != null) {
+            string code = inputField.text;
+            string currentScene = SceneManager.GetActiveScene().name;
+
             Interpreter interpreter = new Interpreter();
 
-            interpreter.EvaluateCode(inputField.text);
+            if (currentScene == "Level1") {
+                code += "\n\navancer(2)\navancer(3)";
+                interpreter.EvaluateCode(code);
 
-            
+                if (interpreter.FunctionsExecutionList[0].Variables["position"].Value == "3" && interpreter.FunctionsExecutionList[1].Variables["position"].Value == "4") {
+                    Debug.Log(1);
+                }
+
+            }
+
         }
     }
 }
