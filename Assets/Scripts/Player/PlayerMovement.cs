@@ -9,8 +9,8 @@ public class PlayerMovement : MonoBehaviour
     public Transform feet;
     private float feetRadius = 0.3f;
     public LayerMask collisionLayer;
-    public GameManager gameManager;
-    public GameData gameData;
+    private GameManager gameManager;
+    private GameData gameData;
 
 
     private SpriteRenderer sr;
@@ -32,15 +32,15 @@ public class PlayerMovement : MonoBehaviour
         grounded = Physics2D.OverlapCircle(feet.position, feetRadius, collisionLayer);
         float moveHorizontal = 0;
 
-        if (gameData.playerUnlockedFunctions[0] && !(gameData.playerUnlockedFunctions[1])) {
-            moveHorizontal = 1;
+        if (gameData.playerUnlockedFunctions[0] && !gameData.playerUnlockedFunctions[1]) {
+            moveHorizontal = 2;
         }
         
         if (Input.GetKey(gameData.playerFunctionsKey[1]) && gameData.playerUnlockedFunctions[1]) { // la touche D permet de se déplacer  vers la droite
-            moveHorizontal += 1; 
+            moveHorizontal += 2; 
             sr.flipX = false;
         } else if (Input.GetKey(gameData.playerFunctionsKey[2]) && gameData.playerUnlockedFunctions[2]) { // La touche Q permet de déplacer vers la gauche
-            moveHorizontal -= 1;
+            moveHorizontal -= 2;
             sr.flipX = true;            
         }
         
