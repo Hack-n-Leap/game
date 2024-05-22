@@ -10,7 +10,9 @@ public class NextLevel : MonoBehaviour
 
     private void Update()
     {
-        if (next)
+        GameManager gameManager = GetComponent<GameManager>();
+
+        if (next && gameManager.gameData.playerUnlockedFunctions[6])
         {
             SceneManager.LoadScene(sceneToLoad);
         }

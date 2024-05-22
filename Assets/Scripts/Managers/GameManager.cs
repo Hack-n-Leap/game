@@ -28,9 +28,12 @@ public class GameManager : MonoBehaviour
             if (gameData == null) { // Cas où aucune sauvegarde n'existe
                 gameData = new GameData();
             } else { 
+                SaveGame();
                 SceneManager.LoadScene(gameData.playerLevel); // Mise à jour de la scène
                 rb.MovePosition(gameData.playerPosition); // Mise à jour de la position du joueur
             }
+        } else {
+            gameData = saveSystem.LoadGame(); // Chargement de la sauvegarde
         }
     }
 
