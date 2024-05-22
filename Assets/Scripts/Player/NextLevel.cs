@@ -12,7 +12,7 @@ public class NextLevel : MonoBehaviour
     {
         GameManager gameManager = GetComponent<GameManager>();
 
-        if (next && gameManager.gameData.playerUnlockedFunctions[6])
+        if ((next && SceneManager.GetActiveScene().name != "Level8") || next && gameManager.gameData.playerUnlockedFunctions[6])
         {
             SceneManager.LoadScene(sceneToLoad);
         }

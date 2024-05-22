@@ -14,7 +14,7 @@ public class PlayerReset : MonoBehaviour
     }
     private void Update()
     {
-        if ((Input.GetKey(gameManager.gameData.playerFunctionsKey[5]) && SceneManager.GetActiveScene().name != "Level7") || gameManager.gameData.playerUnlockedFunctions[5] && Input.GetKey(gameManager.gameData.playerFunctionsKey[5]))
+        if (Input.GetKey(gameManager.gameData.playerFunctionsKey[5]))
         {
             SceneManager.LoadScene(sceneToLoad);
         }
