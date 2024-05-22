@@ -31,6 +31,10 @@ public class PlayerMovement : MonoBehaviour
     {
         grounded = Physics2D.OverlapCircle(feet.position, feetRadius, collisionLayer);
         float moveHorizontal = 0;
+
+        if (gameData.playerUnlockedFunctions[0] && !(gameData.playerUnlockedFunctions[1])) {
+            moveHorizontal = 1;
+        }
         
         if (Input.GetKey(gameData.playerFunctionsKey[1]) && gameData.playerUnlockedFunctions[1]) { // la touche D permet de se déplacer  vers la droite
             moveHorizontal += 1; 
