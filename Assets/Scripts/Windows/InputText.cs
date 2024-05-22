@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using InterpreterLib;
 
 public class InputText : MonoBehaviour
 {
@@ -13,7 +14,11 @@ public class InputText : MonoBehaviour
 
     public void RetrieveText() { // Cette fonction est appelée à chaque fois que le bouton est pressé.
         if (inputField != null) {
-            Debug.Log(inputField.text);
+            Interpreter interpreter = new Interpreter();
+
+            interpreter.EvaluateCode(inputField.text);
+
+            
         }
     }
 }
