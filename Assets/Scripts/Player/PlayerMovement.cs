@@ -9,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
     public Transform feet;
     private float feetRadius = 0.3f;
     public LayerMask collisionLayer;
+    public GameManager gameManager;
+    public GameData gameData;
 
 
     private SpriteRenderer sr;
@@ -21,31 +23,27 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
+        gameManager = GetComponent<GameManager>();
+        gameData = gameManager.gameData;
     }
 
     private void Update()
     {
-        grounded = Physics2D.OverlapCircle(feet.position,feetRadius,collisionLayer);
+        grounded = Physics2D.OverlapCircle(feet.position, feetRadius, collisionLayer);
         float moveHorizontal = Input.GetAxis("Horizontal");
         
-
-        if (Input.GetKey(KeyCode.D) | Input.GetKey(KeyCode.RightArrow)) { // la touche D permet de se déplacer  vers la droite
+        if (Input.GetKey(gameData.playerFunctionsKey[1]) && gameData.playerUnlockedFunctions[1]) { // la touche D permet de se déplacer  vers la droite
             moveHorizontal += 1; 
             sr.flipX = false;
-            
-
-        } else if (Input.GetKey(KeyCode.A) | Input.GetKey(KeyCode.LeftArrow)) { // La touche Q permet de déplacer vers la gauche
+        } else if (Input.GetKey(gameData.playerFunctionsKey[2]) && gameData.playerUnlockedFunctions[2]) { // La touche Q permet de déplacer vers la gauche
             moveHorizontal -= 1;
-            sr.flipX = true;
-            
-            
+            sr.flipX = true;            
         }
         
-        if (Input.GetKey(KeyCode.Space) && grounded) { // La touche espace permet de sauter
+        if (Input.GetKey(gameData.playerFunctionsKey[3]) && gameData.playerUnlockedFunctions[3] && grounded) { // La touche espace permet de sauter
             rb.velocity = new Vector2(rb.velocity.x, playerJumpForce);
 
             grounded = false;
-
         }
 
         rb.velocity = new Vector2(moveHorizontal * playerSpeed, rb.velocity.y);
