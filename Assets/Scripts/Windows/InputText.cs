@@ -61,6 +61,15 @@ public class InputText : MonoBehaviour
                 }
             } else if (currentScene == "Level5") {
                 return;
+            } else if (currentScene == "Level6") {
+                code += "\n\nreset(10, 10, \"R\")\nreset(10, 10, \"A\")";
+
+                interpreter.EvaluateCode(code);
+
+                if (interpreter.FunctionsExecutionList[0].Variables["x"].Value == "0" && interpreter.FunctionsExecutionList[0].Variables["y"].Value == "0" && interpreter.FunctionsExecutionList[1].Variables["x"].Value == "10" && interpreter.FunctionsExecutionList[1].Variables["y"].Value == "10") {
+                    gameManager.gameData.playerUnlockedFunctions[5] = true;
+                    gameManager.SaveGame();
+                }
             }
 
         }
