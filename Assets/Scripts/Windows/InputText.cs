@@ -41,6 +41,15 @@ public class InputText : MonoBehaviour
                     gameManager.gameData.playerUnlockedFunctions[1] = true;
                     gameManager.SaveGame();
                 }
+            } else if (currentScene == "Level3") {
+                code += "\n\navancer_gauche(5, \"Q\")\navancer_gauche(3, \"D\")";
+
+                interpreter.EvaluateCode(code);
+
+                if (interpreter.FunctionsExecutionList[0].Variables["x"].Value == "4" && interpreter.FunctionsExecutionList[1].Variables["x"].Value == "3") {
+                    gameManager.gameData.playerUnlockedFunctions[2] = true;
+                    gameManager.SaveGame();
+                }
             }
 
         }
