@@ -27,7 +27,7 @@ public class InputText : MonoBehaviour
                 code += "\n\navancer(2)\navancer(3)";
                 interpreter.EvaluateCode(code);
 
-                if (interpreter.FunctionsExecutionList[0].Variables["position"].Value == "3" && interpreter.FunctionsExecutionList[1].Variables["position"].Value == "4") {
+                if (interpreter.FunctionsExecutionList[0].Variables["x"].Value == "3" && interpreter.FunctionsExecutionList[1].Variables["x"].Value == "4") {
                     gameManager.gameData.playerUnlockedFunctions[0] = true;
                     gameManager.SaveGame();
                 }
