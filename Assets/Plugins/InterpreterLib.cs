@@ -3,6 +3,7 @@ using System.Globalization;
 using System.Text;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
 
 namespace InterpreterLib
 {
@@ -61,7 +62,10 @@ namespace InterpreterLib
             for (int i = 0; i < parameters.Length; i++) // Create local variables with the parameters given in parameters.
             {
                 int parameterType = interpreter.EvaluateType(parameters[i]); 
+                
                 if (parameterType == Type.VARIABLE) { parameterType = interpreter.Variables[parameters[i]].Type; parameters[i] = interpreter.Variables[parameters[i]].Value; } // Replace variable name with value and type with the value type
+                if (parameterType == Type.STRING) { parameters[i] = parameters[i][1..(parameters[i].Length - 1)]; }
+
                 functionInterpreter.Variables[Var[i]] = new Variable(Var[i], parameters[i], parameterType); 
             }
 
@@ -277,22 +281,22 @@ namespace InterpreterLib
 
             if (lineType == Type.VARIABLE)
             {
-                Console.WriteLine(Variables[line].Value);
+                Debug.Log(Variables[line].Value);
             }
             else if (lineType == Type.OPERATION_NUMBER)
             {
-                Console.WriteLine(EvaluateOperations(line));
+                Debug.Log(EvaluateOperations(line));
             } else if (lineType == Type.OPERATION_BOOL)
             {
-                Console.Write(EvaluateBooleanOperations(line));
+                Debug.Log(EvaluateBooleanOperations(line));
             }
             else if (lineType == Type.STRING)
             {
-                Console.WriteLine(line[1..(line.Length - 1)]);
+                Debug.Log(line[1..(line.Length - 1)]);
             }
             else
             {
-                Console.WriteLine(line);
+                Debug.Log(line);
             }
         }
 
@@ -584,6 +588,9 @@ namespace InterpreterLib
             {
                 return bool.Parse(newExpression);
             }
+            else if (EvaluateType(newExpression) == Type.VARIABLE && Variables[newExpression].Type == Type.BOOLEAN) {
+                return bool.Parse(Variables[newExpression].Value);
+            }
             else
             {
                 throw new Exception($"Unexcepted operation : ${newExpression}");
@@ -675,6 +682,13 @@ namespace InterpreterLib
             int firstElementType = this.EvaluateType(firstPart);
             int secondElementType = this.EvaluateType(secondPart);
 
+            if (firstElementType == Type.STRING) {
+                firstPart = firstPart[1..(firstPart.Length - 1)];
+            }
+            if (secondElementType == Type.STRING) {
+                secondPart = secondPart[1..(secondPart.Length - 1)];
+            }
+
             if (firstElementType == Type.VARIABLE) // Replace the variable type by the type of his value and the content by the value of the variable
             {
                 firstElementType = Variables[firstPart].Type;
@@ -694,7 +708,7 @@ namespace InterpreterLib
             if (secondElementType == Type.OPERATION_NUMBER)
             {
                 secondPart = EvaluateOperations(secondPart).ToString();
-                secondElementType= EvaluateType(secondPart);
+                secondElementType = EvaluateType(secondPart);
             }
 
             return (firstElementType == secondElementType) && (firstPart == secondPart); // Verify that types and value are egual
