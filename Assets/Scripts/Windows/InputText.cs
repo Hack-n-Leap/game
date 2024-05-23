@@ -41,6 +41,7 @@ public class InputText : MonoBehaviour
                     gameManager.gameData.playerUnlockedFunctions[1] = true;
                     gameManager.SaveGame();
                 }
+
             } else if (currentScene == "Level3") {
                 code += "\n\navancer_gauche(5, \"Q\")\navancer_gauche(3, \"D\")";
 
@@ -50,6 +51,7 @@ public class InputText : MonoBehaviour
                     gameManager.gameData.playerUnlockedFunctions[2] = true;
                     gameManager.SaveGame();
                 }
+
             } else if (currentScene == "Level4") {
                 code += "\n\nsaut(0, \"space\")\nsaut(0, \"Q\")";
 
@@ -60,7 +62,19 @@ public class InputText : MonoBehaviour
                     gameManager.SaveGame();
                 }
             } else if (currentScene == "Level5") {
-                return;
+                code += "\n\ntue_ennemi(False, \"player\")\ntue_ennemi(True, \"player\")\ntue_ennemi(True, \"ennemi\")";
+
+                interpreter.EvaluateCode(code);
+
+                bool verifTest1 = !interpreter.FunctionsExecutionList[0].Variables.ContainsKey("ennemi");
+                bool verifTest2 = !interpreter.FunctionsExecutionList[1].Variables.ContainsKey("ennemi");
+                bool verifTest3 = interpreter.FunctionsExecutionList[2].Variables["ennemi"].Value == "False";
+
+                if (verifTest1 && verifTest2 && verifTest3) {
+                    gameManager.gameData.playerUnlockedFunctions[4] = true;
+                    gameManager.SaveGame();
+                }
+                
             } else if (currentScene == "Level6") {
                 code += "\n\nreset(10, 10, \"R\")\nreset(10, 10, \"A\")";
 
