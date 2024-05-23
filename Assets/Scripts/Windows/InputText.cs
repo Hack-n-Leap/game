@@ -32,6 +32,15 @@ public class InputText : MonoBehaviour
                     gameManager.SaveGame();
                 }
 
+            } else if (currentScene == "Level2") {
+                code += "\n\navancer_droite(5, \"D\")\navancer_droite(5, \"G\")";
+
+                interpreter.EvaluateCode(code);
+
+                if (interpreter.FunctionsExecutionList[0].Variables["x"].Value == "6" && interpreter.FunctionsExecutionList[1].Variables["x"].Value == "5") {
+                    gameManager.gameData.playerUnlockedFunctions[1] = true;
+                    gameManager.SaveGame();
+                }
             }
 
         }
