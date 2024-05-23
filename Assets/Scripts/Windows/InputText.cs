@@ -59,6 +59,8 @@ public class InputText : MonoBehaviour
                     gameManager.gameData.playerUnlockedFunctions[3] = true;
                     gameManager.SaveGame();
                 }
+            } else if (currentScene == "Level5") {
+                return;
             }
 
         }
