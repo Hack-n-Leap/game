@@ -2779,6 +2779,7 @@ GameObject:
   - component: {fileID: 435053414}
   - component: {fileID: 435053413}
   - component: {fileID: 435053412}
+  - component: {fileID: 435053415}
   m_Layer: 0
   m_Name: Slime
   m_TagString: Ennemi
@@ -2875,6 +2876,20 @@ Transform:
   - {fileID: 554161680}
   m_Father: {fileID: 1190651506}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &435053415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 435053411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6492d1f341d8b144b237084f0cfd363, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 921896010}
+  spawn: {fileID: 1614096588}
 --- !u!1 &447150798
 GameObject:
   m_ObjectHideFlags: 0
@@ -10709,7 +10724,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 921896010}
-  spawn: {fileID: 0}
+  spawn: {fileID: 1614096588}
 --- !u!61 &885149984
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17196,7 +17211,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 921896010}
-  spawn: {fileID: 0}
+  spawn: {fileID: 1614096588}
 --- !u!61 &1753645788
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19515,7 +19530,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 921896010}
-  spawn: {fileID: 0}
+  spawn: {fileID: 1614096588}
 --- !u!61 &1934988704
 BoxCollider2D:
   m_ObjectHideFlags: 0
