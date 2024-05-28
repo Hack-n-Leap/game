@@ -36,6 +36,7 @@ public class KeyBind : MonoBehaviour
 
     public void KeyBinding() {
         isBinding = !isBinding;
+        buttonText.text = "En attente d'une touche...";
     }
 
 }
