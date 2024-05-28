@@ -2163,11 +2163,11 @@ Transform:
   m_GameObject: {fileID: 377255609}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 66.81, y: 17.685764, z: 0}
+  m_LocalPosition: {x: 8.599998, y: 30.79, z: 0.084685475}
   m_LocalScale: {x: 7.79, y: 7.79, z: 7.79}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1700181260}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &389826739
 GameObject:
@@ -2868,12 +2868,12 @@ Transform:
   m_GameObject: {fileID: 435053411}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.516678, y: -2.7430325, z: 0.15622361}
+  m_LocalPosition: {x: 98.6, y: 26.576, z: 0}
   m_LocalScale: {x: 3.86627, y: 3.86627, z: 3.86627}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 554161680}
-  m_Father: {fileID: 1190651506}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &447150798
 GameObject:
@@ -2934,8 +2934,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 554161680}
-  - component: {fileID: 554161682}
   - component: {fileID: 554161681}
+  - component: {fileID: 554161682}
   m_Layer: 0
   m_Name: kill
   m_TagString: Untagged
@@ -2999,11 +2999,11 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0011386067, y: -0.055809975}
-  m_Size: {x: 0.30637822, y: 0.3462351}
+  m_Offset: {x: 0.002333453, y: -0.09987913}
+  m_Size: {x: 0.33672208, y: 0.4346884}
   m_Direction: 0
 --- !u!1 &555777321
 GameObject:
@@ -10709,7 +10709,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 921896010}
-  spawn: {fileID: 0}
+  spawn: {fileID: 1614096588}
 --- !u!61 &885149984
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12304,38 +12304,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1183097540}
   m_CullTransparentMesh: 1
---- !u!1 &1190651505
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1190651506}
-  m_Layer: 0
-  m_Name: SLIME
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1190651506
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1190651505}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 91.991325, y: 29.308033, z: -0.15622361}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 435053414}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1194042420
 GameObject:
   m_ObjectHideFlags: 0
@@ -12862,11 +12830,11 @@ Transform:
   m_GameObject: {fileID: 1255127872}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 66.81, y: 0.0057621, z: 0}
+  m_LocalPosition: {x: 8.599998, y: 13.11, z: 0.084685475}
   m_LocalScale: {x: 7.79, y: 7.79, z: 7.79}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1700181260}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1299561549
 GameObject:
@@ -13950,6 +13918,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 603691026}
+  - {fileID: 377255610}
+  - {fileID: 1255127873}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1701944127
@@ -17196,7 +17166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 921896010}
-  spawn: {fileID: 0}
+  spawn: {fileID: 1614096588}
 --- !u!61 &1753645788
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19515,7 +19485,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 921896010}
-  spawn: {fileID: 0}
+  spawn: {fileID: 1614096588}
 --- !u!61 &1934988704
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20054,9 +20024,7 @@ SceneRoots:
   - {fileID: 414034599}
   - {fileID: 1850008942}
   - {fileID: 1700181260}
-  - {fileID: 377255610}
-  - {fileID: 1255127873}
-  - {fileID: 1190651506}
+  - {fileID: 435053414}
   - {fileID: 807709781}
   - {fileID: 1761367121}
   - {fileID: 1224663067}
