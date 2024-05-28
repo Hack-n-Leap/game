@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class PauseMenu : MonoBehaviour
 {
-
-
     public void ApplicationQuit() {
         Application.Quit();
     }
