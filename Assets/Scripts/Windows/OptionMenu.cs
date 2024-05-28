@@ -7,6 +7,7 @@ public class OptionMenu : MonoBehaviour
 {
     private GameManager gameManager;
     private TMP_Text textComponent;
+    public int functionIndex;
 
     public void Start() {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
@@ -17,17 +18,15 @@ public class OptionMenu : MonoBehaviour
     }
 
     public void Update() {
-        if (textComponent.name.EndsWith("1") && gameManager.gameData.playerUnlockedFunctions[0]) {
-            textComponent.text = "Avancer tout seul";
-        } else if (textComponent.name.EndsWith("2") && gameManager.gameData.playerUnlockedFunctions[1]) {
+        if (functionIndex == 1 && gameManager.gameData.playerUnlockedFunctions[1]) {
             textComponent.text = "Avancer vers la droite";
-        } else if (textComponent.name.EndsWith("3") && gameManager.gameData.playerUnlockedFunctions[2]) {
+        } else if (functionIndex == 2 && gameManager.gameData.playerUnlockedFunctions[2]) {
             textComponent.text = "Avancer vers la gauche";
-        } else if (textComponent.name.EndsWith("4") && gameManager.gameData.playerUnlockedFunctions[3]) {
+        } else if (functionIndex == 3 && gameManager.gameData.playerUnlockedFunctions[3]) {
             textComponent.text = "Saut";
-        } else if (textComponent.name.EndsWith("5") && gameManager.gameData.playerUnlockedFunctions[4]) {
+        } else if (functionIndex == 4 && gameManager.gameData.playerUnlockedFunctions[4]) {
             textComponent.text = "Tuer ennemi";
-        } else if (textComponent.name.EndsWith("6") && gameManager.gameData.playerUnlockedFunctions[5]) {
+        } else if (functionIndex == 5 && gameManager.gameData.playerUnlockedFunctions[5]) {
             textComponent.text = "Reset";
         } 
     }
