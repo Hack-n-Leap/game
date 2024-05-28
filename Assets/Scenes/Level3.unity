@@ -1083,8 +1083,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2941405394809904032, guid: 1af44dbacaebd7e42b79b47a2fb44b48, type: 3}
       propertyPath: m_Text
-      value: "func avancer_gauche(x, touche):\r\n\tif ... == \"Q\":\r\n\t\tvar x
-        = x ... 1\u200B"
+      value: "func avancer_gauche(x, touche):\n\tif ... == \"Q\":\n\t\tvar x = ..."
       objectReference: {fileID: 0}
     - target: {fileID: 8297339574257187634, guid: 1af44dbacaebd7e42b79b47a2fb44b48, type: 3}
       propertyPath: m_Name
