@@ -24,8 +24,9 @@ public class KeyBind : MonoBehaviour
                 isBinding = false;
                 foreach (KeyCode kc in System.Enum.GetValues(typeof(KeyCode))) {
                     if (Input.GetKey(kc)) {
-                        gameManager.gameData.playerFunctionsKey[0] = kc;
+                        gameManager.gameData.playerFunctionsKey[functionIndex] = kc;
                         buttonText.text = kc.ToString();
+                        gameManager.SaveGame();
                         break;
                     }
                 }
