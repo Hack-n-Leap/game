@@ -13755,7 +13755,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 921896010}
-  spawn: {fileID: 0}
+  spawn: {fileID: 1614096588}
 --- !u!61 &1601871769
 BoxCollider2D:
   m_ObjectHideFlags: 0
