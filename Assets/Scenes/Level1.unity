@@ -1038,6 +1038,7 @@ GameObject:
   - component: {fileID: 360349192}
   - component: {fileID: 360349194}
   - component: {fileID: 360349193}
+  - component: {fileID: 360349195}
   m_Layer: 5
   m_Name: Function Current Key 3
   m_TagString: Untagged
@@ -1161,6 +1162,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 360349191}
   m_CullTransparentMesh: 1
+--- !u!114 &360349195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360349191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d7d25456acc3df4c874a3bba489f165, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  functionIndex: 3
 --- !u!1 &367067254
 GameObject:
   m_ObjectHideFlags: 0
@@ -1865,6 +1879,7 @@ GameObject:
   - component: {fileID: 518477979}
   - component: {fileID: 518477981}
   - component: {fileID: 518477980}
+  - component: {fileID: 518477982}
   m_Layer: 5
   m_Name: Function Current Key 5
   m_TagString: Untagged
@@ -1988,6 +2003,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 518477978}
   m_CullTransparentMesh: 1
+--- !u!114 &518477982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 518477978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d7d25456acc3df4c874a3bba489f165, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  functionIndex: 5
 --- !u!1 &571006696
 GameObject:
   m_ObjectHideFlags: 0
@@ -4396,6 +4424,7 @@ GameObject:
   - component: {fileID: 1436257700}
   - component: {fileID: 1436257702}
   - component: {fileID: 1436257701}
+  - component: {fileID: 1436257703}
   m_Layer: 5
   m_Name: Function Current Key 2
   m_TagString: Untagged
@@ -4519,6 +4548,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1436257699}
   m_CullTransparentMesh: 1
+--- !u!114 &1436257703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1436257699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d7d25456acc3df4c874a3bba489f165, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  functionIndex: 2
 --- !u!1 &1467020222
 GameObject:
   m_ObjectHideFlags: 0
@@ -6384,6 +6426,7 @@ GameObject:
   - component: {fileID: 1897671683}
   - component: {fileID: 1897671685}
   - component: {fileID: 1897671684}
+  - component: {fileID: 1897671686}
   m_Layer: 5
   m_Name: Function Current Key 1
   m_TagString: Untagged
@@ -6507,6 +6550,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1897671682}
   m_CullTransparentMesh: 1
+--- !u!114 &1897671686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1897671682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d7d25456acc3df4c874a3bba489f165, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  functionIndex: 1
 --- !u!1 &1912270448
 GameObject:
   m_ObjectHideFlags: 0
@@ -7064,6 +7120,7 @@ GameObject:
   - component: {fileID: 2019833107}
   - component: {fileID: 2019833109}
   - component: {fileID: 2019833108}
+  - component: {fileID: 2019833110}
   m_Layer: 5
   m_Name: Function Current Key 4
   m_TagString: Untagged
@@ -7187,6 +7244,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2019833106}
   m_CullTransparentMesh: 1
+--- !u!114 &2019833110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019833106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d7d25456acc3df4c874a3bba489f165, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  functionIndex: 4
 --- !u!1 &2069648091
 GameObject:
   m_ObjectHideFlags: 0
