@@ -812,7 +812,7 @@ namespace InterpreterLib
             }
             else
             {
-                throw new Exception($"Error. Unable to get the type of {value}");
+                throw new Exception($"Error. Unable to get the type of {value}.");
             }
         }
     }

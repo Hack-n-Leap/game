@@ -1402,6 +1402,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2941405394809904032, guid: 1af44dbacaebd7e42b79b47a2fb44b48, type: 3}
+      propertyPath: m_Text
+      value: "... reset(x, y, touche):\r\n\t... == \"R\":\r\n\t\tvar x = ...\r\n\t\t...
+        y = 0"
+      objectReference: {fileID: 0}
     - target: {fileID: 8297339574257187634, guid: 1af44dbacaebd7e42b79b47a2fb44b48, type: 3}
       propertyPath: m_Name
       value: Canvas
