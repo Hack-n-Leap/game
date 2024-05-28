@@ -826,6 +826,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b2713a02d4b88d458d80f79a1ce36cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  functionIndex: 0
 --- !u!114 &421178697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1368,6 +1369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b2713a02d4b88d458d80f79a1ce36cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  functionIndex: 0
 --- !u!114 &628672472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2523,6 +2525,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b2713a02d4b88d458d80f79a1ce36cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  functionIndex: 0
 --- !u!114 &980283852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4595,6 +4598,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b2713a02d4b88d458d80f79a1ce36cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  functionIndex: 0
 --- !u!114 &1751121001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4742,6 +4746,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b2713a02d4b88d458d80f79a1ce36cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  functionIndex: 0
 --- !u!114 &1766078249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6058,6 +6063,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b2713a02d4b88d458d80f79a1ce36cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  functionIndex: 0
 --- !u!114 &1992225930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6202,6 +6208,19 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6747023793464611217, guid: 575842f7e3c03e749acbe9feddf70a35, type: 3}
   m_PrefabInstance: {fileID: 2100824207}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2012127620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2012127619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6005fefbc06354b4e9ceaed27a7733d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scriptMenu: {fileID: 517680269}
 --- !u!1 &2046424940
 GameObject:
   m_ObjectHideFlags: 0
@@ -6498,7 +6517,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6747023793464611217, guid: 575842f7e3c03e749acbe9feddf70a35, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2012127620}
   m_SourcePrefab: {fileID: 100100000, guid: 575842f7e3c03e749acbe9feddf70a35, type: 3}
 --- !u!1 &2113670744
 GameObject:
