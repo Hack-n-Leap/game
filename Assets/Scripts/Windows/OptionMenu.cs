@@ -18,9 +18,9 @@ public class OptionMenu : MonoBehaviour
 
     public void Update() {
         if (textComponent.name.EndsWith("1") && gameManager.gameData.playerUnlockedFunctions[0]) {
-            textComponent.text = "Avancer vers la droite (tout seul)";
+            textComponent.text = "Avancer tout seul";
         } else if (textComponent.name.EndsWith("2") && gameManager.gameData.playerUnlockedFunctions[1]) {
-            textComponent.text = "Avancer vers la droite (avec une touche)";
+            textComponent.text = "Avancer vers la droite";
         } else if (textComponent.name.EndsWith("3") && gameManager.gameData.playerUnlockedFunctions[2]) {
             textComponent.text = "Avancer vers la gauche";
         } else if (textComponent.name.EndsWith("4") && gameManager.gameData.playerUnlockedFunctions[3]) {
