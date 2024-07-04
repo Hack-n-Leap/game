@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Animator anim;
     private bool grounded;
+    public bool doubleJump;
 
     void Start()
     {
@@ -29,6 +30,9 @@ public class PlayerMovement : MonoBehaviour
     {
         grounded = Physics2D.OverlapCircle(feet.position, feetRadius, collisionLayer);
         float moveHorizontal = 0;
+        if(grounded){
+            doubleJump = true;
+        }
 
         if (gameManager.gameData.playerUnlockedFunctions[0] && !gameManager.gameData.playerUnlockedFunctions[1]) {
             moveHorizontal = 2;
@@ -42,10 +46,18 @@ public class PlayerMovement : MonoBehaviour
             sr.flipX = true;            
         }
         
-        if (Input.GetKey(gameManager.gameData.playerFunctionsKey[3]) && gameManager.gameData.playerUnlockedFunctions[3] && grounded) { // La touche espace permet de sauter
-            rb.velocity = new Vector2(rb.velocity.x, playerJumpForce);
+        if (Input.GetKeyDown(gameManager.gameData.playerFunctionsKey[3]) && gameManager.gameData.playerUnlockedFunctions[3]) { // La touche espace permet de sauter
+            
 
-            grounded = false;
+            if(grounded){
+                rb.velocity = new Vector2(rb.velocity.x, playerJumpForce);
+                grounded = false;
+            }
+            else if(doubleJump) {
+                doubleJump=false;
+                rb.velocity = new Vector2(rb.velocity.x, playerJumpForce);
+            }
+            
         }
 
         rb.velocity = new Vector2(moveHorizontal * playerSpeed, rb.velocity.y);
