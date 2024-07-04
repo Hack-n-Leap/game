@@ -5,7 +5,13 @@ public class PlayerMovement : MonoBehaviour
 {
     public float playerSpeed = 2f; // Vitesse de déplacement du joueur
     public float playerJumpForce = 5f; // Force de saut du joueur
+    
+    public bool doubleJump;
 
+    private bool fly = false;
+    public float flySpeed = 3f;
+
+    
     public Transform feet;
     private float feetRadius = 0.3f;
     public LayerMask collisionLayer;
@@ -16,7 +22,8 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Animator anim;
     private bool grounded;
-    public bool doubleJump;
+
+
 
     void Start()
     {
@@ -30,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
     {
         grounded = Physics2D.OverlapCircle(feet.position, feetRadius, collisionLayer);
         float moveHorizontal = 0;
-        if(grounded){
+        if(grounded){   //il faut etre au sol pour recharger son double saut
             doubleJump = true;
         }
 
@@ -49,21 +56,41 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(gameManager.gameData.playerFunctionsKey[3]) && gameManager.gameData.playerUnlockedFunctions[3]) { // La touche espace permet de sauter
             
 
-            if(grounded){
+            if(grounded){   
                 rb.velocity = new Vector2(rb.velocity.x, playerJumpForce);
                 grounded = false;
             }
-            else if(doubleJump) {
+            else if(doubleJump) {   //saute si double saut possible
                 doubleJump=false;
                 rb.velocity = new Vector2(rb.velocity.x, playerJumpForce);
             }
             
         }
+        if(Input.GetKeyDown(KeyCode.F)){
+            
+            fly=!fly;
+            
+        } 
+        if(fly){
+            float moveVertical = 0;
+            rb.gravityScale=0;          //supprime la gravité pour voler
+            if(Input.GetKey(KeyCode.W)){        //permet de monter avec Z quand fly actif
+                moveVertical+=2;
+            }
+            if(Input.GetKey(KeyCode.S)){        //permet de descendre avec S quand fly actif
+                moveVertical-=2;
+            }
+            rb.velocity = new Vector2(moveHorizontal * flySpeed, moveVertical * flySpeed);
 
-        rb.velocity = new Vector2(moveHorizontal * playerSpeed, rb.velocity.y);
+        } 
+        else{
+            rb.gravityScale=1;  //remet la gravité normale
+            rb.velocity = new Vector2(moveHorizontal * playerSpeed, rb.velocity.y);
+            
+        }
 
         anim.SetBool("run", moveHorizontal != 0);
-        anim.SetBool("jump", !grounded);
+        anim.SetBool("jump", !grounded && !fly);
 
     }
 
