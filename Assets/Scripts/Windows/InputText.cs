@@ -2,7 +2,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-using InterpreterLib;
+using PseudoCodeInterpreter;
 using IronPython.Hosting;
 using Microsoft.Scripting.Hosting;
 
