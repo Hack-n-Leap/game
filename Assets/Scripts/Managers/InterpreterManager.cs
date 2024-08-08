@@ -13,19 +13,24 @@ public class InterpreterManager {
         InterpreterID = interpreterID;
     }
 
-    public Interpreter RunCode (string code) {
+    public void RunCode (string code) {
         if (InterpreterID == 0)  {
             PseudoCodeInterpreter.Interpreter pseudoCodeEngine = new PseudoCodeInterpreter.Interpreter();
 
-            interpreter.EvaluateCode(code);
+            pseudoCodeEngine.EvaluateCode(code);
         } else if (InterpreterID == 1) {
             ScriptEngine pythonEngine = Python.CreateEngine();
 
-            pythonEngine.Execute(code)
+            pythonEngine.Execute(code);
+        } else {
+            Debug.LogError("Error. Unknow Interpretrer ID.");
         }
     }
-}
+} 
 
-public class Interpreter {
-    public int InterpreterID;
-}
+
+// Suppression temporaire
+
+// public class Interpreter {
+//    public int InterpreterID;
+// }
